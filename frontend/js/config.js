@@ -1,7 +1,7 @@
 /* Configuração do site. Altere aqui o endereço da API quando publicar. */
 window.CONFIG = {
   // Endereço do backend (inclua o prefixo /api/v1, sem barra no final).
-  URL_API: "http://localhost:8000/api/v1",
+  URL_API: "https://mural-aberto.onrender.com/api/v1",
   // Devem acompanhar MAX_IMAGE_SIZE_MB e MAX_VIDEO_SIZE_MB do backend (o servidor é quem decide).
   MAX_IMAGEM_MB: 10,
   MAX_VIDEO_MB: 50,
