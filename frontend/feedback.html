@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Mural Aberto: arte feita no bairro, por quem vive nele.">
+  <title>Mural Aberto – Feedback</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/config.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/feedback.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#principal">Pular para o conteúdo</a>
+  <header id="cabecalho"></header>
+  <main id="principal" tabindex="-1">
+    <div class="conteiner">
+
+      <h1>Enviar Feedback</h1>
+      <p>Conte o que você achou do site, relate um problema ou sugira uma melhoria. Sua opinião nos ajuda a melhorar.</p>
+      <p class="dica">Campos marcados com <span class="obrigatorio" aria-hidden="true">*</span><span class="so-leitor">asterisco</span> são obrigatórios.</p>
+
+      <div id="aviso" aria-live="polite"></div>
+
+      <form id="formulario" class="formulario" novalidate>
+        <div class="campo">
+          <label for="nome">Seu nome<span class="obrigatorio" aria-hidden="true">*</span> </label>
+          <input id="nome" name="author_name" type="text" maxlength="120" autocomplete="name" aria-describedby="erro-author_name">
+          <span id="erro-author_name" class="campo-erro"></span>
+        </div>
+
+        <div class="campo">
+          <label for="tipo">Tipo de feedback <span class="obrigatorio" aria-hidden="true">*</span></label>
+          <select id="tipo" name="feedback_type" required aria-describedby="erro-feedback_type">
+            <option value="">Escolha uma opção</option>
+            <option value="opinion">Opinião</option>
+            <option value="suggestion">Sugestão</option>
+            <option value="bug">Relatar problema</option>
+            <option value="other">Outro</option>
+          </select>
+          <span id="erro-feedback_type" class="campo-erro"></span>
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem <span class="obrigatorio" aria-hidden="true">*</span></label>
+          <span class="dica" id="dica-mensagem">O que você achou do site? O que gostaria de ver melhorado?</span>
+          <textarea id="mensagem" name="message" rows="7" maxlength="2000" required aria-describedby="dica-mensagem contador erro-message"></textarea>
+          <div id="contador" class="contador" aria-live="off">0 de 2000 caracteres</div>
+          <span id="erro-message" class="campo-erro"></span>
+        </div>
+
+        <fieldset class="campo">
+          <legend>Sua nota para o site <span class="opcional">(opcional)</span></legend>
+          <div id="estrelas" class="estrelas-escolha"></div>
+          <span id="erro-rating" class="campo-erro"></span>
+        </fieldset>
+
+        <button id="enviar" class="botao" type="submit">Enviar Feedback</button>
+      </form>
+    </div>
+  </main>
+  <footer id="rodape"></footer>
+</body>
+</html>

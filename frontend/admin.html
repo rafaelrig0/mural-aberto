@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Mural Aberto – Administração</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/config.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#principal">Pular para o conteúdo</a>
+  <header id="cabecalho"></header>
+  <main id="principal" tabindex="-1">
+    <div class="conteiner">
+      <h1>Administração</h1>
+      <div id="aviso" aria-live="polite"></div>
+
+      <section id="area-login" hidden aria-labelledby="titulo-login">
+        <form id="form-login" class="formulario" novalidate>
+          <div class="campo">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" name="email" type="email" autocomplete="username" required aria-describedby="erro-email">
+            <span id="erro-email" class="campo-erro"></span>
+          </div>
+          <div class="campo">
+            <label for="login-senha">Senha</label>
+            <input id="login-senha" name="password" type="password" autocomplete="current-password" required aria-describedby="erro-password">
+            <span id="erro-password" class="campo-erro"></span>
+          </div>
+          <button class="botao" type="submit">Entrar</button>
+        </form>
+      </section>
+
+      <section id="area-painel" hidden>
+        <div class="painel-topo">
+          <p class="meta" id="usuario"></p>
+          <button id="sair" class="botao botao-secundario botao-pequeno" type="button">Sair</button>
+        </div>
+        <nav class="abas" aria-label="Seções do painel" id="abas"></nav>
+        <div id="aviso-painel" aria-live="polite"></div>
+        <div id="conteudo"></div>
+      </section>
+    </div>
+  </main>
+  <footer id="rodape"></footer>
+
+  <dialog id="dialogo" aria-labelledby="dialogo-titulo">
+    <form method="dialog" id="dialogo-form" novalidate>
+      <h2 id="dialogo-titulo"></h2>
+      <p id="dialogo-texto"></p>
+      <div class="campo" id="dialogo-campo" hidden>
+        <label for="dialogo-entrada" id="dialogo-rotulo"></label>
+        <input id="dialogo-entrada" type="text" maxlength="1000">
+        <textarea id="dialogo-area" rows="4" maxlength="1000" hidden></textarea>
+        <span class="campo-erro" id="dialogo-erro"></span>
+      </div>
+      <div class="grupo-botoes">
+        <button type="submit" class="botao" id="dialogo-confirmar">Confirmar</button>
+        <button type="button" class="botao botao-secundario" id="dialogo-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

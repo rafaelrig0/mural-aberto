@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Mural Aberto: arte feita no bairro, por quem vive nele.">
+  <title>Mural Aberto – Início</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/config.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/carrossel.js"></script>
+  <script src="js/votos.js"></script>
+  <script src="js/organizacoes-dados.js"></script>
+  <script src="js/organizacoes.js"></script>
+  <script src="js/inicio.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#principal">Pular para o conteúdo</a>
+  <header id="cabecalho"></header>
+  <main id="principal" tabindex="-1">
+    <div class="conteiner">
+
+      <section class="heroi" aria-labelledby="titulo-inicio">
+        <div>
+          <span class="etiqueta-destaque">Mural Aberto</span>
+          <h1 id="titulo-inicio">A arte do seu bairro, aberta para todo mundo.</h1>
+          <p class="chamada">Envie sua obra, veja o que os vizinhos estão criando, vote nas favoritas e conheça as organizações que fazem a cultura local acontecer.</p>
+          <div class="grupo-botoes">
+            <a class="botao botao-grande" href="obras.html">Ver as obras</a>
+            <a class="botao botao-secundario botao-grande" href="obras.html?enviar=1">+ Adicionar obra</a>
+          </div>
+        </div>
+        <div class="heroi-arte" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="a4"></span></div>
+      </section>
+
+      <section class="secao" aria-labelledby="titulo-destaques">
+        <div class="secao-titulo">
+          <div>
+            <span class="etiqueta-destaque">Obras em destaque</span>
+            <h2 id="titulo-destaques">Novidades no mural e votação</h2>
+            <p>As obras mais recentes aprovadas pela equipe. Escolha a sua favorita.</p>
+          </div>
+          <a class="botao botao-secundario botao-pequeno" href="obras.html">Ver todas as obras</a>
+        </div>
+        <div id="aviso" aria-live="polite"></div>
+        <p id="carregando" class="carregando">Carregando obras…</p>
+        <div id="destaques" class="duas-colunas" hidden>
+          <div id="area-carrossel"></div>
+          <div id="area-votacao"></div>
+        </div>
+      </section>
+
+      <section class="secao" aria-labelledby="titulo-organizacoes">
+        <div class="secao-titulo">
+          <div>
+            <span class="etiqueta-destaque">Parceiras</span>
+            <h2 id="titulo-organizacoes">Organizações que apoiam o Mural Aberto</h2>
+            <p>Quem forma, divulga e dá estrutura aos artistas do bairro.</p>
+          </div>
+          <a class="botao botao-secundario botao-pequeno" href="organizacoes.html">Ver todas</a>
+        </div>
+        <ul id="lista-organizacoes" class="organizacoes-grade"></ul>
+      </section>
+
+      <section class="secao" aria-labelledby="titulo-como">
+        <h2 id="titulo-como">Como funciona</h2>
+        <ol class="passos">
+          <li><strong>Envie sua obra</strong> Fotografia, pintura, grafite, desenho, poema, crônica ou conto. Não precisa de cadastro.</li>
+          <li><strong>Nós analisamos</strong> Cada obra é lida por uma pessoa da equipe antes de ir ao ar.</li>
+          <li><strong>A cidade conhece</strong> Depois de aprovada, a obra aparece no mural, recebe comentários e votos.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+  <footer id="rodape"></footer>
+</body>
+</html>
